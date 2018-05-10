@@ -1,0 +1,29 @@
+package mythread.notify;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+public class ChildNotifyThread implements Runnable {
+
+    /**
+     * 日志
+     */
+    private static final Log LOGGER = LogFactory.getLog(ChildNotifyThread.class);
+
+    public void run() {
+        Thread currentThread = Thread.currentThread();
+        long id = currentThread.getId();
+        ChildNotifyThread.LOGGER.info("线程" + id +" 启动成功，准备进入等待状态");
+        synchronized (ParentNotifyThread.WAIT_CHILEOBJECT) {
+            try {
+            	ChildNotifyThread.LOGGER.info("线程" + id +" 已进入等待状态");
+                ParentNotifyThread.WAIT_CHILEOBJECT.wait();
+            } catch (InterruptedException e) {
+                ChildNotifyThread.LOGGER.error(e.getMessage() , e);
+            }
+        }
+
+        //执行到这里，说明线程被唤醒了 
+        ChildNotifyThread.LOGGER.info("线程" + id + " 被唤醒！");
+    }
+}
