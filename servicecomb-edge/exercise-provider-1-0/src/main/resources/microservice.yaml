@@ -1,0 +1,14 @@
+APPLICATION_ID: servicecomb-edge
+service_description:
+  name: exercise-provider
+  version: 0.0.1
+cse:
+  service:
+    registry:
+      address: http://127.0.0.1:30100
+  rest:
+    address: 0.0.0.0:8080
+    server:
+      thread-count: 10
+    client:
+      thread-count: 10

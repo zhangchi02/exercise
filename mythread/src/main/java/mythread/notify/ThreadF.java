@@ -21,7 +21,7 @@ public class ThreadF {
 			public void run() {
 				synchronized (object) {
 					System.out.println("T2 start!");
-					//object.notify();
+					object.notify();
 					System.out.println("T2 end!");
 				}
 			}

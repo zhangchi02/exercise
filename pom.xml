@@ -8,5 +8,6 @@
 	<modules>
 		<module>exercise</module>
 		<module>mythread</module>
+		<module>servicecomb-edge</module>
 	</modules>
 </project>
