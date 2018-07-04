@@ -12,5 +12,11 @@ servicecomb:
       thread-count: 8
     client:
       thread-count: 8
+  handler:
+    chain:
+      Consumer:
+        default: auth,loadbalance
+        service:
+          auth: loadbalance
   references:
     version-rule: 0.0.0+

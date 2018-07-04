@@ -10,6 +10,7 @@
 		<module>exercise-provider-1-0</module>
 		<module>exercise-consumer</module>
 		<module>exercise-model</module>
+		<module>exercise-auth</module>
 	</modules>
 
 	<dependencyManagement>

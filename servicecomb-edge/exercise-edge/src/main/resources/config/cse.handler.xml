@@ -1,0 +1,3 @@
+<config>
+	<handler id="auth" class="com.zhc.servicecomb.edge.handler.AuthHandler" />
+</config>
