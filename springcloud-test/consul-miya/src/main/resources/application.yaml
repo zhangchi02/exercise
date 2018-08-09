@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+#        ipAddress: 127.0.0.1
+#        preferIpAddress: true
+        healthCheckPath: ${management.contextPath}/health
+        healthChecInterval: 15s
+        instance-id: consul-miya
+  application:
+    name: consul-miya
+server:
+  port: 8502
