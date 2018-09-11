@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl
+    username: root
+    password: Huawei0..
+  jpa:
+    hibernate:
+      ddl-auto: update #1.create 每次删掉重新创建  2.update 没有会创建有则更新 3.create-drop 应用停掉就删表 4.none 默认什么都不做 5.validate 验证类与数据库属性是否一致，不一致则报错
+    show-sql: true

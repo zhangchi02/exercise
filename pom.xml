@@ -12,5 +12,6 @@
 		<module>filter</module>
 		<module>springcloud-test</module>
 		<module>commonjava</module>
+		<module>girl</module>
 	</modules>
 </project>
