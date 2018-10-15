@@ -6,12 +6,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>exercise</module>
 		<module>mythread</module>
 		<module>servicecomb-edge</module>
 		<module>filter</module>
 		<module>springcloud-test</module>
 		<module>commonjava</module>
 		<module>girl</module>
+		<module>sell</module>
 	</modules>
 </project>
