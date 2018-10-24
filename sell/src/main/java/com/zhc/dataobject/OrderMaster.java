@@ -2,11 +2,13 @@ package com.zhc.dataobject;
 
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 import org.hibernate.annotations.DynamicUpdate;
+import org.springframework.data.annotation.Transient;
 
 import com.zhc.enums.OrderStatusEnum;
 import com.zhc.enums.PayStatusEnum;
@@ -52,4 +54,8 @@ public class OrderMaster {
 	
 	/** 更新时间. */
 	/*private Date updateTime;*/
+	
+	//对应数据库时忽略该属性
+	/*@Transient
+	private List<OrderDetail> orderDetailList;*/
 }

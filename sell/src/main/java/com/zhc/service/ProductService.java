@@ -15,28 +15,19 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.zhc.dataobject.ProductInfo;
+import com.zhc.dto.CartDTO;
 
 /**  
- * ClassName:ProductService <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
- * Date:     2018年1月6日 下午6:07:26 <br/>  
- * @author   l00228291  
- * @version    
- * @since    JDK 1.6  
- * @see        
+ * @author   zhangchi02  
+ * @date   
  */
 public interface ProductService {
 
 	ProductInfo findOne(String productInfo);
 	
 	/**
-	 * 
-	 * findUpAll:查询所有在架商品. <br/>  
-	 *  
-	 * @author l00228291  
+	 * findUpAll:查询所有在架商品. 
 	 * @return  
-	 * @since JDK 1.6
 	 */
 	List<ProductInfo> findUpAll();
 	
@@ -44,5 +35,10 @@ public interface ProductService {
 	
 	ProductInfo save(ProductInfo productInfo);
 	
+	//加库存
+	void increaseStock(List<CartDTO> cartDTOList);
+	
+	//减库存
+	void decreaseStock(List<CartDTO> cartDTOList);
 }
   

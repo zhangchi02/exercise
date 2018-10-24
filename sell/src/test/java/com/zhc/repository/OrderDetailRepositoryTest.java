@@ -13,12 +13,15 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.zhc.dataobject.OrderDetail;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
 * @author zhangchi02
 * @date 2018年9月30日
 */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Slf4j
 public class OrderDetailRepositoryTest {
 
 	@Autowired
@@ -42,7 +45,8 @@ public class OrderDetailRepositoryTest {
 	
 	@Test
 	public void findByOrderId(){
-		 List<OrderDetail> orderDetailList = repository.findByOrderId("1111111");
+		 List<OrderDetail> orderDetailList = repository.findByOrderId("123456");
+		 log.info("【查询订单详情列表】result={}",orderDetailList);
 		 Assert.assertNotEquals(0,orderDetailList.size());
 	}
 }
