@@ -8,7 +8,7 @@ public class SleepInterrupt extends Thread{
 			Thread.sleep(2000000);
 			System.out.println("run end!");
 		}catch(InterruptedException e){
-			System.out.println("ÔÚ³ÁË¯ÖĞ±»Í£Ö¹£¡½øÈëcatch£¡" + this.interrupted());
+			System.out.println("åœ¨æ²‰ç¡ä¸­è¢«åœæ­¢ï¼è¿›å…¥catchï¼" + this.interrupted());
 			e.printStackTrace();
 		}
 	}

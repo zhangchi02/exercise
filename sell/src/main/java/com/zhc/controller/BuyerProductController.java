@@ -50,11 +50,11 @@ public class BuyerProductController {
 
 		// 2.查询类目（一次性查询）
 		// List<Integer> categoryTypeList = new ArrayList<>();
-		// 传统方法
-		/*
-		 * for(ProductInfo productInfo: productInfoList){
-		 * categoryTypeList.add(productInfo.getCategoryType()); }
-		 */
+//      传统方法
+//		for (ProductInfo productInfo : productInfoList) {
+//			categoryTypeList.add(productInfo.getCategoryType());
+//		}
+
 		// 精简方法（Java8, lambda）
 		List<Integer> categoryTypeList = productInfoList.stream().map(e -> e.getCategoryType())
 				.collect(Collectors.toList());
@@ -62,14 +62,14 @@ public class BuyerProductController {
 
 		// 3.数据拼装
 		List<ProductViewObject> productVOList = new ArrayList<>();
-		for(ProductCategory productCategory:productCategoryList){
+		for (ProductCategory productCategory : productCategoryList) {
 			ProductViewObject productVO = new ProductViewObject();
 			productVO.setCategoryType(productCategory.getCategoryType());
 			productVO.setCategoryName(productCategory.getCategoryName());
-			
+
 			List<ProductInfoViewObject> productInfoVOList = new ArrayList<>();
-			for(ProductInfo productInfo:productInfoList){
-				if(productInfo.getCategoryType().equals(productCategory.getCategoryType())){
+			for (ProductInfo productInfo : productInfoList) {
+				if (productInfo.getCategoryType().equals(productCategory.getCategoryType())) {
 					ProductInfoViewObject productInfoVO = new ProductInfoViewObject();
 					BeanUtils.copyProperties(productInfo, productInfoVO);
 					productInfoVOList.add(productInfoVO);

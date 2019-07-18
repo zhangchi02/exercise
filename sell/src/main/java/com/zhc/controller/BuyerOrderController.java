@@ -23,6 +23,7 @@ import com.zhc.dto.OrderDTO;
 import com.zhc.enums.ResultEnum;
 import com.zhc.exception.SellException;
 import com.zhc.form.OrderForm;
+import com.zhc.service.BuyerService;
 import com.zhc.service.OrderService;
 import com.zhc.utils.ResultVOUtil;
 import com.zhc.viewobject.ResultViewObject;
@@ -40,6 +41,8 @@ public class BuyerOrderController {
 
 	@Autowired
 	private OrderService orderService;
+	@Autowired
+	private BuyerService buyerService;
 
 	// 创建订单
 	@PostMapping("/create")
@@ -71,13 +74,24 @@ public class BuyerOrderController {
 			throw new SellException(ResultEnum.PARAM_ERROR);
 		}
 
-		PageRequest request = new PageRequest(page,size);
+		PageRequest request = new PageRequest(page, size);
 		Page<OrderDTO> orderDTOPage = orderService.findList(openid, request);
 		return ResultVOUtil.success(orderDTOPage.getContent());
 	}
 
 	// 订单详情
+	@GetMapping("/detail")
+	public ResultViewObject<OrderDTO> detail(@RequestParam("openid") String openid,
+			@RequestParam("orderId") String orderId) {
+		OrderDTO orderDTO = buyerService.findOrderOne(openid, orderId);
+		return ResultVOUtil.success(orderDTO);
+	}
 
 	// 取消订单
+	@PostMapping("/cancel")
+	public ResultViewObject cancel(@RequestParam("openid") String openid, @RequestParam("orderId") String orderId) {
+		buyerService.cancelOrder(openid, orderId);
+		return ResultVOUtil.success();
+	}
 
 }

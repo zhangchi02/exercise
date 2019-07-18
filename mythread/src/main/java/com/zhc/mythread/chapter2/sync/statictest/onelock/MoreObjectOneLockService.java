@@ -4,20 +4,20 @@ public class MoreObjectOneLockService extends Thread {
 	synchronized public static void printA() {
 		try {
 			System.out.println(
-					"Ïß³ÌÃû³ÆÎª£º" + Thread.currentThread().getName() + "£¬ÔÚ" + System.currentTimeMillis() + "½øÈëprintA");
+					"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 			Thread.sleep(3000);
 			System.out.println(
-					"Ïß³ÌÃû³ÆÎª£º" + Thread.currentThread().getName() + "£¬ÔÚ" + System.currentTimeMillis() + "Àë¿ªprintA");
+					"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 
 	synchronized public static void printB() {
-		System.out
-				.println("Ïß³ÌÃû³ÆÎª£º" + Thread.currentThread().getName() + "£¬ÔÚ" + System.currentTimeMillis() + "½øÈëprintB");
-		System.out
-				.println("Ïß³ÌÃû³ÆÎª£º" + Thread.currentThread().getName() + "£¬ÔÚ" + System.currentTimeMillis() + "Àë¿ªprintB");
+		System.out.println(
+				"ThreadNameï¼š" + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
+		System.out.println(
+				"ThreadNameï¼š" + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 	}
 
 	public void run() {

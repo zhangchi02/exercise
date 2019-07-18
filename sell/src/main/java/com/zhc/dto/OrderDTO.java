@@ -53,4 +53,6 @@ public class OrderDTO {
 	private Date updateTime;
 	
 	private List<OrderDetail> orderDetailList;
+//	返回值不为null，而是[]
+//	private List<OrderDetail> orderDetailList = new ArrayList<OrderDetail>();
 }

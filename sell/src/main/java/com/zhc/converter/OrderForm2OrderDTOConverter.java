@@ -35,7 +35,7 @@ public class OrderForm2OrderDTOConverter {
 		} catch (Exception e) {
 			log.error("【对象转换】错误,string={}", orderForm.getItems());
 			throw new SellException(ResultEnum.PARAM_ERROR);
-		}
+		} 
 
 		orderDTO.setOrderDetailList(orderDetailList);
 		return orderDTO;

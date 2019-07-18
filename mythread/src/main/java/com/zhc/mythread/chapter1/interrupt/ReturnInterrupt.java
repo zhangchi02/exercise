@@ -5,7 +5,7 @@ public class ReturnInterrupt extends Thread{
 	public void run(){
 		while(true){
 			if(this.isInterrupted()){
-				System.out.println("Í£Ö¹ÁË£¡£¡£¡");
+				System.out.println("åœæ­¢äº†ï¼ï¼ï¼");
 				return;
 			}
 			System.out.println("timer:"+System.currentTimeMillis());

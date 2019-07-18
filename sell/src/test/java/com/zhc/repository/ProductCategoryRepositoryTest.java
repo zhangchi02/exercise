@@ -34,7 +34,7 @@ public class ProductCategoryRepositoryTest {
 		ProductCategory productCategory = new ProductCategory("今日最优",2);
 		ProductCategory result= repository.save(productCategory);
 		Assert.assertNotNull(result);
-	}
+	} 
 	
 	@Test
 	public void findByCategoryTypeInTest(){

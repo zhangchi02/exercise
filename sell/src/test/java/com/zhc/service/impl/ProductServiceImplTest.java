@@ -30,13 +30,10 @@ import com.zhc.service.ProductService;
 import junit.framework.Assert;
 
 /**  
- * ClassName:ProductServiceImplTest <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
- * Date:     2018年1月6日 下午6:24:14 <br/>  
- * @author   l00228291  
+ * Date:     2018年1月6日 下午6:24:14 <br/>
+ * @author   zhangchi02
  * @version    
- * @since    JDK 1.6  
+ * @since    JDK 1.8
  * @see        
  */
 @RunWith(SpringRunner.class)

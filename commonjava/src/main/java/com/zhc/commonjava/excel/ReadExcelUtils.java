@@ -12,16 +12,16 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.Cell;
+//import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
-import org.apache.poi.ss.usermodel.DateUtil;
+//import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
-import org.apache.poi.ss.util.CellReference;
+//import org.apache.poi.ss.util.CellReference;
 
-import com.microsoft.schemas.office.visio.x2012.main.CellType;
+//import com.microsoft.schemas.office.visio.x2012.main.CellType;
 
 public class ReadExcelUtils {
 
@@ -107,14 +107,18 @@ public class ReadExcelUtils {
 			wb.write(new FileOutputStream("/Users/mike/table.xls"));
 		} catch (FileNotFoundException e) {
 			  
-			// TODO Auto-generated catch block  
 			e.printStackTrace();  
 			
 		} catch (IOException e) {
 			  
-			// TODO Auto-generated catch block  
 			e.printStackTrace();  
 			
+		}finally {
+			try {
+				wb.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 

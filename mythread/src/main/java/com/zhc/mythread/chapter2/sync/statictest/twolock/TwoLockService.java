@@ -4,26 +4,26 @@ public class TwoLockService extends Thread {
 	synchronized public static void printA() {
 		try {
 			System.out.println(
-					"线程名称为：" + Thread.currentThread().getName() + "，在" + System.currentTimeMillis() + "进入printA");
+					"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 			Thread.sleep(3000);
 			System.out.println(
-					"线程名称为：" + Thread.currentThread().getName() + "，在" + System.currentTimeMillis() + "离开printA");
+					"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 
 	synchronized public static void printB() {
-		System.out
-				.println("线程名称为：" + Thread.currentThread().getName() + "，在" + System.currentTimeMillis() + "进入printB");
-		System.out
-				.println("线程名称为：" + Thread.currentThread().getName() + "，在" + System.currentTimeMillis() + "离开printB");
+		System.out.println(
+				"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
+		System.out.println(
+				"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 	}
 
 	synchronized public void printC() {
-		System.out
-				.println("线程名称为：" + Thread.currentThread().getName() + "，在" + System.currentTimeMillis() + "进入printC");
-		System.out
-				.println("线程名称为：" + Thread.currentThread().getName() + "，在" + System.currentTimeMillis() + "离开printC");
+		System.out.println(
+				"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
+		System.out.println(
+				"ThreadName: " + Thread.currentThread().getName() + " beginTime: " + System.currentTimeMillis());
 	}
 }

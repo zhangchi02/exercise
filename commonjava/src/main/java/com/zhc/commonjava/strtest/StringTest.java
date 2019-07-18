@@ -10,8 +10,6 @@
 package com.zhc.commonjava.strtest;  
 /**  
  * ClassName:StringTest <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
  * Date:     2018年3月21日 上午9:33:10 <br/>  
  * @author   l00228291  
  * @version    

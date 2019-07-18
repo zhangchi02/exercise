@@ -11,7 +11,7 @@ public class InterruptSleep extends Thread {
 			Thread.sleep(200000);
 			System.out.println("run end");
 		} catch (InterruptedException e) {
-			System.out.println("ÏÈÍ£Ö¹£¬ÔÙÓöµ½ÁËsleep£¡½øÈëcatch£¡" + this.isInterrupted());
+			System.out.println("å…ˆåœæ­¢ï¼Œå†é‡åˆ°äº†sleepï¼è¿›å…¥catchï¼" + this.isInterrupted());
 			e.printStackTrace();
 		}
 	}
@@ -21,7 +21,6 @@ public class InterruptSleep extends Thread {
 		is.start();
 		is.interrupt();
 		System.out.println("end!!!");
-
 	}
 
 }

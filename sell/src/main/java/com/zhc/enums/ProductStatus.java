@@ -12,11 +12,8 @@ package com.zhc.enums;
 import lombok.Getter;
 
 /**  
- * ClassName:ProductStatus <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
- * Date:     2018年1月6日 下午6:16:35 <br/>  
- * @author   l00228291  
+ * Date:     2018年1月6日 下午6:16:35 <br/>
+ * @author   zhangchi02
  * @version    
  * @since    JDK 1.6  
  * @see        

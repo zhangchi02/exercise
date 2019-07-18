@@ -56,6 +56,6 @@ public class OrderMaster {
 	/*private Date updateTime;*/
 	
 	//对应数据库时忽略该属性
-	/*@Transient
-	private List<OrderDetail> orderDetailList;*/
+//	@Transient
+//	private List<OrderDetail> orderDetailList;
 }

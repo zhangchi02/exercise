@@ -17,11 +17,8 @@ import javax.persistence.Id;
 import lombok.Data;
 
 /**  
- * ClassName:ProductInfo <br/>  
- * Function: TODO ADD FUNCTION. <br/>  
- * Reason:   TODO ADD REASON. <br/>  
  * Date:     2018年1月6日 下午5:32:13 <br/>  
- * @author   l00228291  
+ * @author   zhangchi02  
  * @version    
  * @since    JDK 1.6  
  * @see        
