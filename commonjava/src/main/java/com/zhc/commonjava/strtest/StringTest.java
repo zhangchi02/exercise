@@ -19,8 +19,13 @@ package com.zhc.commonjava.strtest;
 public class StringTest {
 
 	public static void main(String[] args) {
+		parseIntTest();
+	}
+	
+	public static void parseIntTest(){
 		String studentId = "201804001";
 		System.out.println((Integer.parseInt(studentId)+1+"--"));
 	}
+	
 }
   

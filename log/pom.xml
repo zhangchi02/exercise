@@ -1,18 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.zhc</groupId>
-	<artifactId>exercise</artifactId>
+	<groupId>com.zhc.exercise</groupId>
+	<artifactId>log</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<modules>
-		<module>mythread</module>
-		<module>servicecomb-edge</module>
-		<module>filter</module>
-		<module>springcloud-test</module>
-		<module>commonjava</module>
-		<module>girl</module>
-		<module>sell</module>
-		<module>log</module>
+		<module>log4j</module>
+		<module>log4j-slf4j</module>
+		<module>logback</module>
 	</modules>
 </project>
