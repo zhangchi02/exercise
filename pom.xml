@@ -14,5 +14,8 @@
 		<module>girl</module>
 		<module>sell</module>
 		<module>log</module>
+		<module>mynetty</module>
+		<module>spectator</module>
+		<module>spring</module>
 	</modules>
 </project>
