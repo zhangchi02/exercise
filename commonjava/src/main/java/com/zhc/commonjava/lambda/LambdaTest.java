@@ -15,16 +15,16 @@ import java.util.function.Predicate;
 public class LambdaTest {
 
 	public static void main(String[] args) {
-		// // 旧方法:
-		// new Thread(new Runnable() {
-		// @Override
-		// public void run() {
-		// System.out.println("Hello from thread");
-		// }
-		// }).start();
-		//
-		// // 新方法:
-		// new Thread(() -> System.out.println("Hello from thread")).start();
+		 // 旧方法:
+		 new Thread(new Runnable() {
+		 @Override
+		 public void run() {
+		 System.out.println("Hello from thread");
+		 }
+		 }).start();
+
+		 // 新方法:
+		 new Thread(() -> System.out.println("Hello from thread")).start();
 
 		// Button button = new Button("lambda");
 		// // Old way:
